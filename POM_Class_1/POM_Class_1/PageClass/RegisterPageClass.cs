@@ -28,8 +28,8 @@ namespace POM_Class_1.PageClass
         string Invalid_FirstName = "123456";
         string Invalid_LastName = "123456";
         string Invalid_email = "elisha@gmail.com";
-        string Invalid_password = "harrison@gmail.com";
-        string Invalid_confirmPassword = "harrison@gmail.com";
+        string Invalid_password = "testing@123";
+        string Invalid_confirmPassword = "testing@123";
 
 
         //Locators
@@ -82,7 +82,7 @@ namespace POM_Class_1.PageClass
         public void Unsuccessful_invalidmessage()
         {
             Thread.Sleep(300);
-            string validationText = chromeDriver.FindElement(By.CssSelector("body.customer-account-create.page-layout-1column:nth-child(2) div.page-wrapper:nth-child(4) main.page-main div.page.messages:nth-child(3) div:nth-child(2) div.messages > div.message-error.error.message")).Text;
+            string validationText = chromeDriver.FindElement(By.XPath("//body/div[1]/main[1]/div[2]/div[2]/div[1]/div[1]")).Text;
             Assert.AreEqual("There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account.", validationText);
         }
 
