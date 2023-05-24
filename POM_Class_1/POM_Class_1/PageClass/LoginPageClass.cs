@@ -31,7 +31,10 @@ namespace POM_Class_1.PageClass
         By UserId = By.Id("email");
         By Passcode = By.Id("pass");
         By LoginButton = By.Id("send2");
-      
+      public void goto_url()
+        {
+            chromeDriver.FindElement(By.XPath("//header/div[1]/div[1]/ul[1]/li[2]/a[1]")).Click();
+        }
         public void ValidLogin ()
         {
             chromeDriver.FindElement(UserId).SendKeys(valid_userId);

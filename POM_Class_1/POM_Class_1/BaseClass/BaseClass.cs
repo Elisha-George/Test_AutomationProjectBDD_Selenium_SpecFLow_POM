@@ -12,7 +12,7 @@ namespace POM_Class_1.BaseClass
    public class Baseclass
     {
         public ChromeDriver chromeDriver;
-        public string url = "https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/";
+        public string url = "https://magento.softwaretestingboard.com/";
 
 
         public void DriverInitialize()
@@ -22,9 +22,11 @@ namespace POM_Class_1.BaseClass
 
         public void classDispose()
         {
-            //chromeDriver = new ChromeDriver();
-            chromeDriver.Close();
-            chromeDriver.Dispose();
+           // chromeDriver = new ChromeDriver();
+           // chromeDriver.Close();
+           //chromeDriver.Dispose();
+            chromeDriver.Quit();
+
         }
 
         public void OpenBrowserAndUrl()

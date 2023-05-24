@@ -14,6 +14,7 @@ namespace POM_Class_1
         {
             loginPageClass.DriverInitialize();
             loginPageClass.OpenBrowserAndUrl();
+            loginPageClass.goto_url();
         }
 
         [When(@"enter valid email and password")]

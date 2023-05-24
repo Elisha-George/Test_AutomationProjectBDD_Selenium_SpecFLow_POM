@@ -18,7 +18,7 @@ namespace POM_Class_1.PageClass
 
         string valid_FirstName = "james";
         string Valid_LastName = "harrison";
-        string valid_email = "harry_gmail@gmail.com";
+        string valid_email = "james_gmail@gmail.com";
         string valid_password = "harry@123";
         string valid_confirmPassword = "harry@123";
 
