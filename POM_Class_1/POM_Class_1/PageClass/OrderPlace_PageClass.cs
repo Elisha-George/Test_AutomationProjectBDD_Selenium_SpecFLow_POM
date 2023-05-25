@@ -19,14 +19,14 @@ namespace POM_Class_1.PageClass
 
         //variables 
         string email = "elisha_ali@hotmail.com";
-        string firstname = "";
-        string lastname = "";
-        string company = "";
-        string street_1 = "";
-        string street_2 = "";
-        string street_3 = "";
-        string city = "";
-        string zipcode = "";
+        string firstname = "Elisha";
+        string lastname = "George";
+        string company = "Google";
+        string street_1 = "House # 25";
+        string street_2 = "Street # 25";
+        string street_3 = "Brooklyn";
+        string city = "New York";
+        string zipcode = "9823-2332";
         string state = "Florida";
         string country = "United States";
         string phone = "0223-4221232";
@@ -108,11 +108,8 @@ namespace POM_Class_1.PageClass
             //DropDown
 
             SelectElement selectState = new SelectElement(chromeDriver.FindElement(By.XPath("//body[1]/div[1]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[5]/div[1]/select[1]")));
-            selectState.SelectByText(country);
-            
-
+            selectState.SelectByText(state);
             chromeDriver.FindElement(ZipCode).SendKeys(zipcode);
-
             //Dropdown
             SelectElement selectCountry = new SelectElement(chromeDriver.FindElement(By.XPath("//body[1]/div[1]/main[1]/div[2]/div[1]/div[2]/div[4]/ol[1]/li[1]/div[2]/form[2]/div[1]/div[8]/div[1]/select[1]")));
             selectCountry.SelectByText(country);
@@ -141,6 +138,14 @@ namespace POM_Class_1.PageClass
             Assert.AreEqual("Thank you for your purchase!", WarningMessage);
 
         }
+        public void emptyCart_CheckError()
+        {
+            chromeDriver.FindElement(By.XPath("//button[@id='product-addtocart-button']")).Click();
+            Thread.Sleep(1000);
+            string WarningMessage = chromeDriver.FindElement(By.XPath("//div[@id='super_attribute[143]-error")).Text;
+            Assert.AreEqual("This is a required field.", WarningMessage);
+        }
+
 
 
 
