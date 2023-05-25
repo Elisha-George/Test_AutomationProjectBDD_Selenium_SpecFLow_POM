@@ -51,24 +51,28 @@ namespace POM_Class_1
         public void ThenValidateTheOrderConfirmationMessage()
         {
             orderPlace.validateSuccess();
+            orderPlace.classDispose();
         }
 
         [Given(@"check the warniing message")]
         public void GivenCheckTheWarniingMessage()
         {
             orderPlace.checkWarning();
+
         }
 
         [When(@"click on the add to cart button on next page")]
         public void WhenClickOnTheAddToCartButtonOnNextPage()
         {
-            throw new PendingStepException();
+            orderPlace.empty_addtoCart();
         }
 
         [Then(@"validate the erro to fill all the required fields")]
         public void ThenValidateTheErroToFillAllTheRequiredFields()
         {
             orderPlace.emptyCart_CheckError();
+            orderPlace.classDispose();
+
         }
     }
 }

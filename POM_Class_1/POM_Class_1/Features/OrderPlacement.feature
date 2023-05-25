@@ -8,7 +8,7 @@ Scenario: validate the order placement feature
 	And select the size and color of the product and to cart 
 	And click on add to cart
 	And got to the cart option and click to proceed checkout
-	#And enter all the details for the check out and click next
+	And enter all the details for the check out and click next
 	When placing the order
 	Then validate the order confirmation message
 
@@ -17,6 +17,6 @@ Scenario: validate the order placement feature
 Scenario: validate the order placement feature without selecting any product
 	Given navigate to homepage to select the product
 	And click on add to cart
-	And Validate the warniing message
+	And check the warniing message
 	When click on the add to cart button on next page
 	Then validate the erro to fill all the required fields
