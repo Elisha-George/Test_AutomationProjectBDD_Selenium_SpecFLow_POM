@@ -10,8 +10,6 @@ Scenario: to validate the working of wishlist with login
 	Then Validate the error to login
 
 
-
-
 @tag1
 Scenario: to validate the working of wishlist without login 
 	Given navigate to the homepage to select wishlist

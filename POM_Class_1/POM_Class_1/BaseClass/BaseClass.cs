@@ -35,5 +35,12 @@ namespace POM_Class_1.BaseClass
             chromeDriver.Navigate().GoToUrl(url);
         }
 
+        //A method for all page class
+
+       /* public void MainLogin()
+        {
+
+        }*/
+
     }
 }

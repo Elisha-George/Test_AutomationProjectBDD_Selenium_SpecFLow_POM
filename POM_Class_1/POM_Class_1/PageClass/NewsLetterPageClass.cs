@@ -45,13 +45,13 @@ namespace POM_Class_1.PageClass
         }
         public void validate_successMsg()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(6000);
             string validatation_text = chromeDriver.FindElement(By.XPath("/html[1]/body[1]/div[1]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]")).Text;
             Assert.AreEqual("Thank you for your subscription.", validatation_text);
         }
         public void validate_ErrorMsg()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(6000);
             string Error_text = chromeDriver.FindElement(By.XPath("/html[1]/body[1]/div[1]/main[1]/div[2]/div[2]/div[1]/div[1]/div[1]")).Text;
             Assert.AreEqual("This email address is already subscribed.", Error_text);
         }
